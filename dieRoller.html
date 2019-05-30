@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Equinox Die Roller</title>
+</head>
+
+<body>
+
+    <div class="container-fluid h-100">
+
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+			
+				<div class="pt-3 text-center">
+					<p class="display-4">
+						Equinox Die Roller
+					</p>
+				</div>
+			
+				<ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" id="pills-multiple-tab" data-toggle="pill" href="#pills-multiple" role="tab" aria-controls="pills-multiple" aria-selected="true">Roll Dice</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="pills-check-tab" data-toggle="pill" href="#pills-check" role="tab" aria-controls="pills-check" aria-selected="false">Make Check</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="pills-init-tab" data-toggle="pill" href="#pills-init" role="tab" aria-controls="pills-init" aria-selected="false">Roll Init</a>
+					</li>
+				</ul>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+		
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+			
+            <div class="col-md-4 text-center">
+			
+				<div class="tab-content" id="pills-tabContent">
+
+					<!-- Rolling for a multiple dice -->
+					<div class="tab-pane fade active show" id="pills-multiple" role="tabpanel" aria-labelledby="pills-multiple-tab">
+						
+						<h3 class="pt-3">
+							Roll Dice!
+						</h3>
+						
+						<div class="pt-3 align-items-center">
+							<p class="border display-4" id="resultTextMultiple">
+							0
+							</p>
+						</div>
+						
+						<div>
+							Number of Dice
+							<input id="multipleDieChooser" type="number" value="1" min="1" max="100" step="1"/>
+						</div>
+						
+						<div class="align-items-center text-center pt-3">
+							<button type="button" class="btn btn-success btn-lg" id="rollMultiple">
+							Roll
+							</button>
+						</div>
+
+					</div>
+				
+					<!-- Rolling a check-->
+					<div class="tab-pane fade" id="pills-check" role="tabpanel" aria-labelledby="pills-check-tab">
+						
+						<h3 class="pt-3">
+							Make a check against a TN
+						</h3>
+						
+						<div class="row">
+							<div class="col-md-6">
+
+							Number of Dice
+							<input id="choiceDieChooser" type="number" value="1" min="1" max="100" step="1"/>
+							
+							Target Number
+							<input id="choiceTargetNumber" type="number" value="1" min="0" max="100" step="1"/>
+							
+							Derby
+							<input id="choiceDerbyChooser" type="number" value="0" min="-100" max="100" step="1"/>
+							
+							</div>
+							
+							
+							<div class="col-md-6">
+								<div class="pt-3 align-items-center">
+									Rolls
+									<p class="border display-8" id="resultTextCheck">
+										0
+									</p>
+								</div>
+								<div class="pt-3 align-items-center">
+									Successes
+									<p class="border display-8" id="resultTextSuccess">
+										0
+									</p>
+								</div>
+							
+							
+							</div>
+						</div>
+						
+						<div class="align-items-center text-center pt-3">
+							<button type="button" class="btn btn-success btn-lg" id="rollChoice">
+							Roll
+							</button>
+						</div>
+						
+					</div>
+					
+					<!-- Rolling initiative -->
+					<div class="tab-pane fade" id="pills-init" role="tabpanel" aria-labelledby="pills-init-tab">
+						<h3 class="pt-3">
+							Roll Initiative!
+						</h3>
+						
+						<div class="pt-3 align-items-center">
+							<p class="border display-1" id="resultTextInit">
+							0
+							</p>
+						</div>
+						
+						<div class="align-items-center text-center pt-3">
+							<button type="button" class="btn btn-success btn-lg" id="rollInit">
+							Roll Init
+							</button>
+						</div>
+
+					</div>
+				
+				</div>
+			</div>
+				
+            </div>
+		</div>
+			
+		<div class="col-md-4">
+		</div>
+			
+		</div>
+			
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="src/bootstrap-input-spinner.js"></script>
+			<script src="src/dieRoller.js"></script>
+
+</body>
+
+</html>
